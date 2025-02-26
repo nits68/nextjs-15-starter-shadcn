@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
 import {
     DropdownMenu,
@@ -9,14 +9,14 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuShortcut,
-    DropdownMenuTrigger
-} from '@/registry/new-york-v4/ui/dropdown-menu';
-import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from '@/registry/new-york-v4/ui/sidebar';
+    DropdownMenuTrigger,
+} from "@/registry/new-york-v4/ui/dropdown-menu";
+import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "@/registry/new-york-v4/ui/sidebar";
 
-import { ChevronsUpDown, Plus } from 'lucide-react';
+import { ChevronsUpDown, Plus } from "lucide-react";
 
 export function TeamSwitcher({
-    teams
+    teams,
 }: {
     teams: {
         name: string;
@@ -48,7 +48,7 @@ export function TeamSwitcher({
                     <DropdownMenuContent
                         className='w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg'
                         align='start'
-                        side={isMobile ? 'bottom' : 'right'}
+                        side={isMobile ? "bottom" : "right"}
                         sideOffset={4}>
                         <DropdownMenuLabel className='text-muted-foreground text-xs'>Teams</DropdownMenuLabel>
                         {teams.map((team, index) => (

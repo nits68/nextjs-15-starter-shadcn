@@ -11,10 +11,10 @@ import {
     ContextMenuSub,
     ContextMenuSubContent,
     ContextMenuSubTrigger,
-    ContextMenuTrigger
-} from '@/registry/new-york-v4/ui/context-menu';
+    ContextMenuTrigger,
+} from "@/registry/new-york-v4/ui/context-menu";
 
-import { Code2Icon, PlusIcon, TrashIcon } from 'lucide-react';
+import { Code2Icon, PlusIcon, TrashIcon } from "lucide-react";
 
 export function ContextMenuDemo() {
     return (

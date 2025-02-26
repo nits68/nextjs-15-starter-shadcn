@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { JSX, useEffect, useState } from 'react';
+import { JSX, useEffect, useState } from "react";
 
-import { useTheme } from 'next-themes';
+import { useTheme } from "next-themes";
 
 // Define the type for each switch option
 interface SwitchOption {
@@ -46,10 +46,10 @@ const ThemeSwitch: React.FC = () => {
                     <button
                         key={data.value}
                         className={`flex items-center gap-2 px-4 py-2 text-black dark:text-white ${
-                            theme === data.value && mounted ? 'bg-neutral-200 dark:bg-neutral-700' : 'bg-transparent'
+                            theme === data.value && mounted ? "bg-neutral-200 dark:bg-neutral-700" : "bg-transparent"
                         } dark:hover:bg-neutral-800`}
                         onClick={() => {
-                            console.log('Theme:', data.value);
+                            console.log("Theme:", data.value);
                             setTheme(data.value);
                         }}>
                         {data.iconSvg}

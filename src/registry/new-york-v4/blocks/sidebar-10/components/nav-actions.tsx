@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { Button } from '@/registry/new-york-v4/ui/button';
-import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york-v4/ui/popover';
+import { Button } from "@/registry/new-york-v4/ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/new-york-v4/ui/popover";
 import {
     Sidebar,
     SidebarContent,
@@ -11,8 +11,8 @@ import {
     SidebarGroupContent,
     SidebarMenu,
     SidebarMenuButton,
-    SidebarMenuItem
-} from '@/registry/new-york-v4/ui/sidebar';
+    SidebarMenuItem,
+} from "@/registry/new-york-v4/ui/sidebar";
 
 import {
     ArrowDown,
@@ -29,70 +29,70 @@ import {
     Settings2,
     Star,
     Trash,
-    Trash2
-} from 'lucide-react';
+    Trash2,
+} from "lucide-react";
 
 const data = [
     [
         {
-            label: 'Customize Page',
-            icon: Settings2
+            label: "Customize Page",
+            icon: Settings2,
         },
         {
-            label: 'Turn into wiki',
-            icon: FileText
-        }
+            label: "Turn into wiki",
+            icon: FileText,
+        },
     ],
     [
         {
-            label: 'Copy Link',
-            icon: Link
+            label: "Copy Link",
+            icon: Link,
         },
         {
-            label: 'Duplicate',
-            icon: Copy
+            label: "Duplicate",
+            icon: Copy,
         },
         {
-            label: 'Move to',
-            icon: CornerUpRight
+            label: "Move to",
+            icon: CornerUpRight,
         },
         {
-            label: 'Move to Trash',
-            icon: Trash2
-        }
+            label: "Move to Trash",
+            icon: Trash2,
+        },
     ],
     [
         {
-            label: 'Undo',
-            icon: CornerUpLeft
+            label: "Undo",
+            icon: CornerUpLeft,
         },
         {
-            label: 'View analytics',
-            icon: LineChart
+            label: "View analytics",
+            icon: LineChart,
         },
         {
-            label: 'Version History',
-            icon: GalleryVerticalEnd
+            label: "Version History",
+            icon: GalleryVerticalEnd,
         },
         {
-            label: 'Show delete pages',
-            icon: Trash
+            label: "Show delete pages",
+            icon: Trash,
         },
         {
-            label: 'Notifications',
-            icon: Bell
-        }
+            label: "Notifications",
+            icon: Bell,
+        },
     ],
     [
         {
-            label: 'Import',
-            icon: ArrowUp
+            label: "Import",
+            icon: ArrowUp,
         },
         {
-            label: 'Export',
-            icon: ArrowDown
-        }
-    ]
+            label: "Export",
+            icon: ArrowDown,
+        },
+    ],
 ];
 
 export function NavActions() {

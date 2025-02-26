@@ -1,61 +1,61 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/registry/new-york-v4/ui/chart';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/registry/new-york-v4/ui/chart";
 
-import { TrendingUp } from 'lucide-react';
-import { Label, Pie, PieChart } from 'recharts';
+import { TrendingUp } from "lucide-react";
+import { Label, Pie, PieChart } from "recharts";
 
-export const description = 'A pie chart with stacked sections';
+export const description = "A pie chart with stacked sections";
 
 const desktopData = [
-    { month: 'january', desktop: 186, fill: 'var(--color-january)' },
-    { month: 'february', desktop: 305, fill: 'var(--color-february)' },
-    { month: 'march', desktop: 237, fill: 'var(--color-march)' },
-    { month: 'april', desktop: 173, fill: 'var(--color-april)' },
-    { month: 'may', desktop: 209, fill: 'var(--color-may)' }
+    { month: "january", desktop: 186, fill: "var(--color-january)" },
+    { month: "february", desktop: 305, fill: "var(--color-february)" },
+    { month: "march", desktop: 237, fill: "var(--color-march)" },
+    { month: "april", desktop: 173, fill: "var(--color-april)" },
+    { month: "may", desktop: 209, fill: "var(--color-may)" },
 ];
 
 const mobileData = [
-    { month: 'january', mobile: 80, fill: 'var(--color-january)' },
-    { month: 'february', mobile: 200, fill: 'var(--color-february)' },
-    { month: 'march', mobile: 120, fill: 'var(--color-march)' },
-    { month: 'april', mobile: 190, fill: 'var(--color-april)' },
-    { month: 'may', mobile: 130, fill: 'var(--color-may)' }
+    { month: "january", mobile: 80, fill: "var(--color-january)" },
+    { month: "february", mobile: 200, fill: "var(--color-february)" },
+    { month: "march", mobile: 120, fill: "var(--color-march)" },
+    { month: "april", mobile: 190, fill: "var(--color-april)" },
+    { month: "may", mobile: 130, fill: "var(--color-may)" },
 ];
 
 const chartConfig = {
     visitors: {
-        label: 'Visitors'
+        label: "Visitors",
     },
     desktop: {
-        label: 'Desktop'
+        label: "Desktop",
     },
     mobile: {
-        label: 'Mobile'
+        label: "Mobile",
     },
     january: {
-        label: 'January',
-        color: 'var(--chart-1)'
+        label: "January",
+        color: "var(--chart-1)",
     },
     february: {
-        label: 'February',
-        color: 'var(--chart-2)'
+        label: "February",
+        color: "var(--chart-2)",
     },
     march: {
-        label: 'March',
-        color: 'var(--chart-3)'
+        label: "March",
+        color: "var(--chart-3)",
     },
     april: {
-        label: 'April',
-        color: 'var(--chart-4)'
+        label: "April",
+        color: "var(--chart-4)",
     },
     may: {
-        label: 'May',
-        color: 'var(--chart-5)'
-    }
+        label: "May",
+        color: "var(--chart-5)",
+    },
 } satisfies ChartConfig;
 
 export function ChartPieStacked() {

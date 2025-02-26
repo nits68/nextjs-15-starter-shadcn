@@ -1,13 +1,13 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { Card, CardContent } from '@/registry/new-york-v4/ui/card';
+import { Card, CardContent } from "@/registry/new-york-v4/ui/card";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
     CarouselNext,
-    CarouselPrevious
-} from '@/registry/new-york-v4/ui/carousel';
+    CarouselPrevious,
+} from "@/registry/new-york-v4/ui/carousel";
 
 export function CarouselDemo() {
     return (
@@ -33,7 +33,7 @@ export function CarouselDemo() {
             <Carousel
                 className='max-w-sm *:data-[slot=carousel-next]:hidden *:data-[slot=carousel-previous]:hidden *:data-[slot=carousel-next]:md:inline-flex *:data-[slot=carousel-previous]:md:inline-flex'
                 opts={{
-                    align: 'start'
+                    align: "start",
                 }}>
                 <CarouselContent>
                     {Array.from({ length: 5 }).map((_, index) => (

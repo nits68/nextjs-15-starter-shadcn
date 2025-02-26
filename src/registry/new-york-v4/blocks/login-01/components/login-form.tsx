@@ -1,12 +1,12 @@
-import { cn } from '@/registry/new-york-v4/lib/utils';
-import { Button } from '@/registry/new-york-v4/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { Input } from '@/registry/new-york-v4/ui/input';
-import { Label } from '@/registry/new-york-v4/ui/label';
+import { cn } from "@/registry/new-york-v4/lib/utils";
+import { Button } from "@/registry/new-york-v4/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { Input } from "@/registry/new-york-v4/ui/input";
+import { Label } from "@/registry/new-york-v4/ui/label";
 
-export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) {
+export function LoginForm({ className, ...props }: React.ComponentProps<"div">) {
     return (
-        <div className={cn('flex flex-col gap-6', className)} {...props}>
+        <div className={cn("flex flex-col gap-6", className)} {...props}>
             <Card>
                 <CardHeader>
                     <CardTitle>Login to your account</CardTitle>
@@ -40,7 +40,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
                             </div>
                         </div>
                         <div className='mt-4 text-center text-sm'>
-                            Don&apos;t have an account?{' '}
+                            Don&apos;t have an account?{" "}
                             <a href='#' className='underline underline-offset-4'>
                                 Sign up
                             </a>

@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { cn } from '@/lib/utils';
-import { toggleVariants } from '@/registry/new-york-v4/ui/toggle';
-import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group';
+import { cn } from "@/lib/utils";
+import { toggleVariants } from "@/registry/new-york-v4/ui/toggle";
+import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";
 
-import { type VariantProps } from 'class-variance-authority';
+import { type VariantProps } from "class-variance-authority";
 
 const ToggleGroupContext = React.createContext<VariantProps<typeof toggleVariants>>({
-    size: 'default',
-    variant: 'default'
+    size: "default",
+    variant: "default",
 });
 
 function ToggleGroup({
@@ -26,8 +26,8 @@ function ToggleGroup({
             data-variant={variant}
             data-size={size}
             className={cn(
-                'group/toggle-group flex items-center rounded-md data-[variant=outline]:shadow-xs',
-                className
+                "group/toggle-group flex items-center rounded-md data-[variant=outline]:shadow-xs",
+                className,
             )}
             {...props}>
             <ToggleGroupContext.Provider value={{ variant, size }}>{children}</ToggleGroupContext.Provider>
@@ -52,10 +52,10 @@ function ToggleGroupItem({
             className={cn(
                 toggleVariants({
                     variant: context.variant || variant,
-                    size: context.size || size
+                    size: context.size || size,
                 }),
-                'min-w-0 shrink-0 rounded-none shadow-none first:rounded-l-md last:rounded-r-md focus:z-10 focus-visible:z-10 data-[variant=outline]:border-l-0 data-[variant=outline]:first:border-l',
-                className
+                "min-w-0 shrink-0 rounded-none shadow-none first:rounded-l-md last:rounded-r-md focus:z-10 focus-visible:z-10 data-[variant=outline]:border-l-0 data-[variant=outline]:first:border-l",
+                className,
             )}
             {...props}>
             {children}

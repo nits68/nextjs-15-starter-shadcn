@@ -1,40 +1,40 @@
-'use client';
+"use client";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
 import {
     ChartConfig,
     ChartContainer,
     ChartLegend,
     ChartLegendContent,
     ChartTooltip,
-    ChartTooltipContent
-} from '@/registry/new-york-v4/ui/chart';
+    ChartTooltipContent,
+} from "@/registry/new-york-v4/ui/chart";
 
-import { ArrowDownFromLine, ArrowUpFromLine, TrendingUp } from 'lucide-react';
-import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts';
+import { ArrowDownFromLine, ArrowUpFromLine, TrendingUp } from "lucide-react";
+import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts";
 
-export const description = 'A radar chart with icons';
+export const description = "A radar chart with icons";
 
 const chartData = [
-    { month: 'January', desktop: 186, mobile: 80 },
-    { month: 'February', desktop: 305, mobile: 200 },
-    { month: 'March', desktop: 237, mobile: 120 },
-    { month: 'April', desktop: 73, mobile: 190 },
-    { month: 'May', desktop: 209, mobile: 130 },
-    { month: 'June', desktop: 214, mobile: 140 }
+    { month: "January", desktop: 186, mobile: 80 },
+    { month: "February", desktop: 305, mobile: 200 },
+    { month: "March", desktop: 237, mobile: 120 },
+    { month: "April", desktop: 73, mobile: 190 },
+    { month: "May", desktop: 209, mobile: 130 },
+    { month: "June", desktop: 214, mobile: 140 },
 ];
 
 const chartConfig = {
     desktop: {
-        label: 'Desktop',
-        color: 'var(--chart-1)',
-        icon: ArrowDownFromLine
+        label: "Desktop",
+        color: "var(--chart-1)",
+        icon: ArrowDownFromLine,
     },
     mobile: {
-        label: 'Mobile',
-        color: 'var(--chart-2)',
-        icon: ArrowUpFromLine
-    }
+        label: "Mobile",
+        color: "var(--chart-2)",
+        icon: ArrowUpFromLine,
+    },
 } satisfies ChartConfig;
 
 export function ChartRadarIcons() {
@@ -50,7 +50,7 @@ export function ChartRadarIcons() {
                         data={chartData}
                         margin={{
                             top: -40,
-                            bottom: -10
+                            bottom: -10,
                         }}>
                         <ChartTooltip cursor={false} content={<ChartTooltipContent indicator='line' />} />
                         <PolarAngleAxis dataKey='month' />

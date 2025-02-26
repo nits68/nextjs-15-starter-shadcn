@@ -1,12 +1,12 @@
-import { cn } from '@/registry/new-york-v4/lib/utils';
-import { Button } from '@/registry/new-york-v4/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { Input } from '@/registry/new-york-v4/ui/input';
-import { Label } from '@/registry/new-york-v4/ui/label';
+import { cn } from "@/registry/new-york-v4/lib/utils";
+import { Button } from "@/registry/new-york-v4/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { Input } from "@/registry/new-york-v4/ui/input";
+import { Label } from "@/registry/new-york-v4/ui/label";
 
-export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) {
+export function LoginForm({ className, ...props }: React.ComponentProps<"div">) {
     return (
-        <div className={cn('flex flex-col gap-6', className)} {...props}>
+        <div className={cn("flex flex-col gap-6", className)} {...props}>
             <Card>
                 <CardHeader className='text-center'>
                     <CardTitle className='text-xl'>Welcome back</CardTitle>
@@ -59,7 +59,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
                                 </Button>
                             </div>
                             <div className='text-center text-sm'>
-                                Don&apos;t have an account?{' '}
+                                Don&apos;t have an account?{" "}
                                 <a href='#' className='underline underline-offset-4'>
                                     Sign up
                                 </a>
@@ -69,7 +69,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
                 </CardContent>
             </Card>
             <div className='text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4'>
-                By clicking continue, you agree to our <a href='#'>Terms of Service</a> and{' '}
+                By clicking continue, you agree to our <a href='#'>Terms of Service</a> and{" "}
                 <a href='#'>Privacy Policy</a>.
             </div>
         </div>

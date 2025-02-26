@@ -5,14 +5,14 @@ import {
     BreadcrumbLink,
     BreadcrumbList,
     BreadcrumbPage,
-    BreadcrumbSeparator
-} from '@/registry/new-york-v4/ui/breadcrumb';
+    BreadcrumbSeparator,
+} from "@/registry/new-york-v4/ui/breadcrumb";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuTrigger
-} from '@/registry/new-york-v4/ui/dropdown-menu';
+    DropdownMenuTrigger,
+} from "@/registry/new-york-v4/ui/dropdown-menu";
 
 export function BreadcrumbDemo() {
     return (

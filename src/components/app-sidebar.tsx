@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { Index } from '@/__registry__';
-import { NavUser } from '@/registry/new-york-v4/blocks/sidebar-07/components/nav-user';
-import { TeamSwitcher } from '@/registry/new-york-v4/blocks/sidebar-07/components/team-switcher';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/registry/new-york-v4/ui/collapsible';
-import { Label } from '@/registry/new-york-v4/ui/label';
+import { Index } from "@/__registry__";
+import { NavUser } from "@/registry/new-york-v4/blocks/sidebar-07/components/nav-user";
+import { TeamSwitcher } from "@/registry/new-york-v4/blocks/sidebar-07/components/team-switcher";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/registry/new-york-v4/ui/collapsible";
+import { Label } from "@/registry/new-york-v4/ui/label";
 import {
     Sidebar,
     SidebarContent,
@@ -22,8 +22,8 @@ import {
     SidebarMenuSub,
     SidebarMenuSubButton,
     SidebarMenuSubItem,
-    SidebarRail
-} from '@/registry/new-york-v4/ui/sidebar';
+    SidebarRail,
+} from "@/registry/new-york-v4/ui/sidebar";
 
 import {
     AudioWaveform,
@@ -34,121 +34,121 @@ import {
     GalleryVerticalEnd,
     Search,
     Settings2,
-    SquareTerminal
-} from 'lucide-react';
+    SquareTerminal,
+} from "lucide-react";
 
 // This is sample data.
 const data = {
     user: {
-        name: 'shadcn',
-        email: 'm@example.com',
-        avatar: '/avatars/shadcn.jpg'
+        name: "shadcn",
+        email: "m@example.com",
+        avatar: "/avatars/shadcn.jpg",
     },
     teams: [
         {
-            name: 'Acme Inc',
+            name: "Acme Inc",
             logo: GalleryVerticalEnd,
-            plan: 'Enterprise'
+            plan: "Enterprise",
         },
         {
-            name: 'Acme Corp.',
+            name: "Acme Corp.",
             logo: AudioWaveform,
-            plan: 'Startup'
+            plan: "Startup",
         },
         {
-            name: 'Evil Corp.',
+            name: "Evil Corp.",
             logo: Command,
-            plan: 'Free'
-        }
+            plan: "Free",
+        },
     ],
     navMain: [
         {
-            title: 'Playground',
-            url: '#',
+            title: "Playground",
+            url: "#",
             icon: SquareTerminal,
             isActive: true,
             items: [
                 {
-                    title: 'History',
-                    url: '#'
+                    title: "History",
+                    url: "#",
                 },
                 {
-                    title: 'Starred',
-                    url: '#'
+                    title: "Starred",
+                    url: "#",
                 },
                 {
-                    title: 'Settings',
-                    url: '#'
-                }
-            ]
+                    title: "Settings",
+                    url: "#",
+                },
+            ],
         },
         {
-            title: 'Models',
-            url: '#',
+            title: "Models",
+            url: "#",
             icon: Bot,
             items: [
                 {
-                    title: 'Genesis',
-                    url: '#'
+                    title: "Genesis",
+                    url: "#",
                 },
                 {
-                    title: 'Explorer',
-                    url: '#'
+                    title: "Explorer",
+                    url: "#",
                 },
                 {
-                    title: 'Quantum',
-                    url: '#'
-                }
-            ]
+                    title: "Quantum",
+                    url: "#",
+                },
+            ],
         },
         {
-            title: 'Documentation',
-            url: '#',
+            title: "Documentation",
+            url: "#",
             icon: BookOpen,
             items: [
                 {
-                    title: 'Introduction',
-                    url: '#'
+                    title: "Introduction",
+                    url: "#",
                 },
                 {
-                    title: 'Get Started',
-                    url: '#'
+                    title: "Get Started",
+                    url: "#",
                 },
                 {
-                    title: 'Tutorials',
-                    url: '#'
+                    title: "Tutorials",
+                    url: "#",
                 },
                 {
-                    title: 'Changelog',
-                    url: '#'
-                }
-            ]
+                    title: "Changelog",
+                    url: "#",
+                },
+            ],
         },
         {
-            title: 'Settings',
-            url: '#',
+            title: "Settings",
+            url: "#",
             icon: Settings2,
             items: [
                 {
-                    title: 'General',
-                    url: '#'
+                    title: "General",
+                    url: "#",
                 },
                 {
-                    title: 'Team',
-                    url: '#'
+                    title: "Team",
+                    url: "#",
                 },
                 {
-                    title: 'Billing',
-                    url: '#'
+                    title: "Billing",
+                    url: "#",
                 },
                 {
-                    title: 'Limits',
-                    url: '#'
-                }
-            ]
-        }
+                    title: "Limits",
+                    url: "#",
+                },
+            ],
+        },
     ],
-    components: Object.values(Index).filter((item) => item.type === 'registry:ui')
+    components: Object.values(Index).filter((item) => item.type === "registry:ui"),
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -229,5 +229,5 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
 function getComponentName(name: string) {
     // convert kebab-case to title case
-    return name.replace(/-/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+    return name.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 }

@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
 import {
     DropdownMenu,
@@ -9,14 +9,14 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuShortcut,
-    DropdownMenuTrigger
-} from '@/registry/new-york-v4/ui/dropdown-menu';
-import { SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/registry/new-york-v4/ui/sidebar';
+    DropdownMenuTrigger,
+} from "@/registry/new-york-v4/ui/dropdown-menu";
+import { SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/registry/new-york-v4/ui/sidebar";
 
-import { ChevronDown, Plus } from 'lucide-react';
+import { ChevronDown, Plus } from "lucide-react";
 
 export function TeamSwitcher({
-    teams
+    teams,
 }: {
     teams: {
         name: string;

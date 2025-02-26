@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuSeparator,
-    DropdownMenuTrigger
-} from '@/registry/new-york-v4/ui/dropdown-menu';
+    DropdownMenuTrigger,
+} from "@/registry/new-york-v4/ui/dropdown-menu";
 import {
     SidebarGroup,
     SidebarGroupLabel,
@@ -14,13 +14,13 @@ import {
     SidebarMenuAction,
     SidebarMenuButton,
     SidebarMenuItem,
-    useSidebar
-} from '@/registry/new-york-v4/ui/sidebar';
+    useSidebar,
+} from "@/registry/new-york-v4/ui/sidebar";
 
-import { Folder, type LucideIcon, MoreHorizontal, Share, Trash2 } from 'lucide-react';
+import { Folder, type LucideIcon, MoreHorizontal, Share, Trash2 } from "lucide-react";
 
 export function NavProjects({
-    projects
+    projects,
 }: {
     projects: {
         name: string;
@@ -51,8 +51,8 @@ export function NavProjects({
                             </DropdownMenuTrigger>
                             <DropdownMenuContent
                                 className='w-48'
-                                side={isMobile ? 'bottom' : 'right'}
-                                align={isMobile ? 'end' : 'start'}>
+                                side={isMobile ? "bottom" : "right"}
+                                align={isMobile ? "end" : "start"}>
                                 <DropdownMenuItem>
                                     <Folder className='text-muted-foreground' />
                                     <span>View Project</span>

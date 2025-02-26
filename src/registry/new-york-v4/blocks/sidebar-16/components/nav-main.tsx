@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/registry/new-york-v4/ui/collapsible';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/registry/new-york-v4/ui/collapsible";
 import {
     SidebarGroup,
     SidebarGroupLabel,
@@ -10,13 +10,13 @@ import {
     SidebarMenuItem,
     SidebarMenuSub,
     SidebarMenuSubButton,
-    SidebarMenuSubItem
-} from '@/registry/new-york-v4/ui/sidebar';
+    SidebarMenuSubItem,
+} from "@/registry/new-york-v4/ui/sidebar";
 
-import { ChevronRight, type LucideIcon } from 'lucide-react';
+import { ChevronRight, type LucideIcon } from "lucide-react";
 
 export function NavMain({
-    items
+    items,
 }: {
     items: {
         title: string;

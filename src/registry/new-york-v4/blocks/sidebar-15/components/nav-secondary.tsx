@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
     SidebarGroup,
@@ -6,10 +6,10 @@ import {
     SidebarMenu,
     SidebarMenuBadge,
     SidebarMenuButton,
-    SidebarMenuItem
-} from '@/registry/new-york-v4/ui/sidebar';
+    SidebarMenuItem,
+} from "@/registry/new-york-v4/ui/sidebar";
 
-import { type LucideIcon } from 'lucide-react';
+import { type LucideIcon } from "lucide-react";
 
 export function NavSecondary({
     items,

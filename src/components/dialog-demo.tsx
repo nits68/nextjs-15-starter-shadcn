@@ -1,4 +1,4 @@
-import { Button } from '@/registry/new-york-v4/ui/button';
+import { Button } from "@/registry/new-york-v4/ui/button";
 import {
     Dialog,
     DialogClose,
@@ -7,10 +7,10 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-    DialogTrigger
-} from '@/registry/new-york-v4/ui/dialog';
-import { Input } from '@/registry/new-york-v4/ui/input';
-import { Label } from '@/registry/new-york-v4/ui/label';
+    DialogTrigger,
+} from "@/registry/new-york-v4/ui/dialog";
+import { Input } from "@/registry/new-york-v4/ui/input";
+import { Label } from "@/registry/new-york-v4/ui/label";
 
 export function DialogDemo() {
     return (

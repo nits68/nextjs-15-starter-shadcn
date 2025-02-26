@@ -1,40 +1,40 @@
-'use client';
+"use client";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
 import {
     ChartConfig,
     ChartContainer,
     ChartLegend,
     ChartLegendContent,
     ChartTooltip,
-    ChartTooltipContent
-} from '@/registry/new-york-v4/ui/chart';
+    ChartTooltipContent,
+} from "@/registry/new-york-v4/ui/chart";
 
-import { TrendingDown, TrendingUp } from 'lucide-react';
-import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
+import { TrendingDown, TrendingUp } from "lucide-react";
+import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 
-export const description = 'An area chart with icons';
+export const description = "An area chart with icons";
 
 const chartData = [
-    { month: 'January', desktop: 186, mobile: 80 },
-    { month: 'February', desktop: 305, mobile: 200 },
-    { month: 'March', desktop: 237, mobile: 120 },
-    { month: 'April', desktop: 73, mobile: 190 },
-    { month: 'May', desktop: 209, mobile: 130 },
-    { month: 'June', desktop: 214, mobile: 140 }
+    { month: "January", desktop: 186, mobile: 80 },
+    { month: "February", desktop: 305, mobile: 200 },
+    { month: "March", desktop: 237, mobile: 120 },
+    { month: "April", desktop: 73, mobile: 190 },
+    { month: "May", desktop: 209, mobile: 130 },
+    { month: "June", desktop: 214, mobile: 140 },
 ];
 
 const chartConfig = {
     desktop: {
-        label: 'Desktop',
-        color: 'var(--chart-1)',
-        icon: TrendingDown
+        label: "Desktop",
+        color: "var(--chart-1)",
+        icon: TrendingDown,
     },
     mobile: {
-        label: 'Mobile',
-        color: 'var(--chart-2)',
-        icon: TrendingUp
-    }
+        label: "Mobile",
+        color: "var(--chart-2)",
+        icon: TrendingUp,
+    },
 } satisfies ChartConfig;
 
 export function ChartAreaIcons() {
@@ -51,7 +51,7 @@ export function ChartAreaIcons() {
                         data={chartData}
                         margin={{
                             left: 12,
-                            right: 12
+                            right: 12,
                         }}>
                         <CartesianGrid vertical={false} />
                         <XAxis

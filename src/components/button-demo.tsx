@@ -1,6 +1,6 @@
-import { Button } from '@/registry/new-york-v4/ui/button';
+import { Button } from "@/registry/new-york-v4/ui/button";
 
-import { ArrowRightIcon, Loader2Icon, SendIcon } from 'lucide-react';
+import { ArrowRightIcon, Loader2Icon, SendIcon } from "lucide-react";
 
 export function ButtonDemo() {
     return (

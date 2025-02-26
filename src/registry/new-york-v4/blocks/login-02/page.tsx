@@ -1,6 +1,6 @@
-import { LoginForm } from '@/registry/new-york-v4/blocks/login-02/components/login-form';
+import { LoginForm } from "@/registry/new-york-v4/blocks/login-02/components/login-form";
 
-import { GalleryVerticalEnd } from 'lucide-react';
+import { GalleryVerticalEnd } from "lucide-react";
 
 export default function LoginPage() {
     return (

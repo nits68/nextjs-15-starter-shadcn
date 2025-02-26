@@ -1,34 +1,34 @@
-'use client';
+"use client";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/registry/new-york-v4/ui/chart';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/registry/new-york-v4/ui/chart";
 
-import { TrendingUp } from 'lucide-react';
-import { Bar, BarChart, CartesianGrid, LabelList, XAxis, YAxis } from 'recharts';
+import { TrendingUp } from "lucide-react";
+import { Bar, BarChart, CartesianGrid, LabelList, XAxis, YAxis } from "recharts";
 
-export const description = 'A bar chart with a custom label';
+export const description = "A bar chart with a custom label";
 
 const chartData = [
-    { month: 'January', desktop: 186, mobile: 80 },
-    { month: 'February', desktop: 305, mobile: 200 },
-    { month: 'March', desktop: 237, mobile: 120 },
-    { month: 'April', desktop: 73, mobile: 190 },
-    { month: 'May', desktop: 209, mobile: 130 },
-    { month: 'June', desktop: 214, mobile: 140 }
+    { month: "January", desktop: 186, mobile: 80 },
+    { month: "February", desktop: 305, mobile: 200 },
+    { month: "March", desktop: 237, mobile: 120 },
+    { month: "April", desktop: 73, mobile: 190 },
+    { month: "May", desktop: 209, mobile: 130 },
+    { month: "June", desktop: 214, mobile: 140 },
 ];
 
 const chartConfig = {
     desktop: {
-        label: 'Desktop',
-        color: 'var(--chart-1)'
+        label: "Desktop",
+        color: "var(--chart-1)",
     },
     mobile: {
-        label: 'Mobile',
-        color: 'var(--chart-2)'
+        label: "Mobile",
+        color: "var(--chart-2)",
     },
     label: {
-        color: 'var(--background)'
-    }
+        color: "var(--background)",
+    },
 } satisfies ChartConfig;
 
 export function ChartBarLabelCustom() {
@@ -45,7 +45,7 @@ export function ChartBarLabelCustom() {
                         data={chartData}
                         layout='vertical'
                         margin={{
-                            right: 16
+                            right: 16,
                         }}>
                         <CartesianGrid horizontal={false} />
                         <YAxis

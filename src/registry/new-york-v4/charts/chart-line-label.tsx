@@ -1,31 +1,31 @@
-'use client';
+"use client";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/registry/new-york-v4/ui/chart';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/registry/new-york-v4/ui/chart";
 
-import { TrendingUp } from 'lucide-react';
-import { CartesianGrid, LabelList, Line, LineChart, XAxis } from 'recharts';
+import { TrendingUp } from "lucide-react";
+import { CartesianGrid, LabelList, Line, LineChart, XAxis } from "recharts";
 
-export const description = 'A line chart with a label';
+export const description = "A line chart with a label";
 
 const chartData = [
-    { month: 'January', desktop: 186, mobile: 80 },
-    { month: 'February', desktop: 305, mobile: 200 },
-    { month: 'March', desktop: 237, mobile: 120 },
-    { month: 'April', desktop: 73, mobile: 190 },
-    { month: 'May', desktop: 209, mobile: 130 },
-    { month: 'June', desktop: 214, mobile: 140 }
+    { month: "January", desktop: 186, mobile: 80 },
+    { month: "February", desktop: 305, mobile: 200 },
+    { month: "March", desktop: 237, mobile: 120 },
+    { month: "April", desktop: 73, mobile: 190 },
+    { month: "May", desktop: 209, mobile: 130 },
+    { month: "June", desktop: 214, mobile: 140 },
 ];
 
 const chartConfig = {
     desktop: {
-        label: 'Desktop',
-        color: 'var(--chart-1)'
+        label: "Desktop",
+        color: "var(--chart-1)",
     },
     mobile: {
-        label: 'Mobile',
-        color: 'var(--chart-2)'
-    }
+        label: "Mobile",
+        color: "var(--chart-2)",
+    },
 } satisfies ChartConfig;
 
 export function ChartLineLabel() {
@@ -43,7 +43,7 @@ export function ChartLineLabel() {
                         margin={{
                             top: 20,
                             left: 12,
-                            right: 12
+                            right: 12,
                         }}>
                         <CartesianGrid vertical={false} />
                         <XAxis
@@ -60,10 +60,10 @@ export function ChartLineLabel() {
                             stroke='var(--color-desktop)'
                             strokeWidth={2}
                             dot={{
-                                fill: 'var(--color-desktop)'
+                                fill: "var(--color-desktop)",
                             }}
                             activeDot={{
-                                r: 6
+                                r: 6,
                             }}>
                             <LabelList position='top' offset={12} className='fill-foreground' fontSize={12} />
                         </Line>

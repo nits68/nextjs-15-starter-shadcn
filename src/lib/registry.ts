@@ -1,9 +1,9 @@
-import { Index } from '@/__registry__';
+import { Index } from "@/__registry__";
 
-import { registryItemSchema } from 'shadcn/registry';
+import { registryItemSchema } from "shadcn/registry";
 
 const memoizedIndex: typeof Index = Object.fromEntries(
-    Object.entries(Index).map(([style, items]) => [style, { ...items }])
+    Object.entries(Index).map(([style, items]) => [style, { ...items }]),
 );
 
 export function getRegistryComponent(name: string) {
@@ -19,7 +19,7 @@ export async function getRegistryItem(name: string) {
 
     // Convert all file paths to object.
     // TODO: remove when we migrate to new registry.
-    item.files = item.files.map((file: unknown) => (typeof file === 'string' ? { path: file } : file));
+    item.files = item.files.map((file: unknown) => (typeof file === "string" ? { path: file } : file));
 
     // Fail early before doing expensive file operations.
     const result = registryItemSchema.safeParse(item);
@@ -48,7 +48,7 @@ export async function getRegistryItem(name: string) {
 
     const parsed = registryItemSchema.safeParse({
         ...result.data,
-        files
+        files,
         // meta,
     });
 
@@ -65,13 +65,13 @@ export function fixImport(content: string) {
     const regex = /@\/(.+?)\/((?:.*?\/)?(?:components|ui|hooks|lib))\/([\w-]+)/g;
 
     const replacement = (match: string, path: string, type: string, component: string) => {
-        if (type.endsWith('components')) {
+        if (type.endsWith("components")) {
             return `@/components/${component}`;
-        } else if (type.endsWith('ui')) {
+        } else if (type.endsWith("ui")) {
             return `@/components/ui/${component}`;
-        } else if (type.endsWith('hooks')) {
+        } else if (type.endsWith("hooks")) {
             return `@/hooks/${component}`;
-        } else if (type.endsWith('lib')) {
+        } else if (type.endsWith("lib")) {
             return `@/lib/${component}`;
         }
 
@@ -92,7 +92,7 @@ export function createFileTreeForRegistryItemFiles(files: Array<{ path: string; 
 
     for (const file of files) {
         const path = file.target ?? file.path;
-        const parts = path.split('/');
+        const parts = path.split("/");
         let currentLevel = root;
 
         for (let i = 0; i < parts.length; i++) {

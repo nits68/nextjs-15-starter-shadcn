@@ -1,20 +1,20 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import { cn } from '@/lib/utils';
-import { Button } from '@/registry/new-york-v4/ui/button';
-import { Card, CardContent } from '@/registry/new-york-v4/ui/card';
-import { Input } from '@/registry/new-york-v4/ui/input';
-import { Label } from '@/registry/new-york-v4/ui/label';
+import { cn } from "@/lib/utils";
+import { Button } from "@/registry/new-york-v4/ui/button";
+import { Card, CardContent } from "@/registry/new-york-v4/ui/card";
+import { Input } from "@/registry/new-york-v4/ui/input";
+import { Label } from "@/registry/new-york-v4/ui/label";
 
 export function LoginForm({
     className,
     imageUrl,
     ...props
-}: React.ComponentProps<'div'> & {
+}: React.ComponentProps<"div"> & {
     imageUrl?: string;
 }) {
     return (
-        <div className={cn('flex flex-col gap-6', className)} {...props}>
+        <div className={cn("flex flex-col gap-6", className)} {...props}>
             <Card className='overflow-hidden p-0'>
                 <CardContent className='grid p-0 md:grid-cols-2'>
                     <form className='p-6 md:p-8'>
@@ -74,7 +74,7 @@ export function LoginForm({
                                 </Button>
                             </div>
                             <div className='text-center text-sm'>
-                                Don&apos;t have an account?{' '}
+                                Don&apos;t have an account?{" "}
                                 <a href='#' className='underline underline-offset-4'>
                                     Sign up
                                 </a>
@@ -94,7 +94,7 @@ export function LoginForm({
                 </CardContent>
             </Card>
             <div className='text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4'>
-                By clicking continue, you agree to our <a href='#'>Terms of Service</a> and{' '}
+                By clicking continue, you agree to our <a href='#'>Terms of Service</a> and{" "}
                 <a href='#'>Privacy Policy</a>.
             </div>
         </div>

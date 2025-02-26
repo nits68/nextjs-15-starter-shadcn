@@ -1,4 +1,4 @@
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/registry/new-york-v4/ui/collapsible';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/registry/new-york-v4/ui/collapsible";
 import {
     SidebarGroup,
     SidebarGroupContent,
@@ -9,13 +9,13 @@ import {
     SidebarMenuItem,
     SidebarMenuSub,
     SidebarMenuSubButton,
-    SidebarMenuSubItem
-} from '@/registry/new-york-v4/ui/sidebar';
+    SidebarMenuSubItem,
+} from "@/registry/new-york-v4/ui/sidebar";
 
-import { ChevronRight, MoreHorizontal, Plus } from 'lucide-react';
+import { ChevronRight, MoreHorizontal, Plus } from "lucide-react";
 
 export function NavWorkspaces({
-    workspaces
+    workspaces,
 }: {
     workspaces: {
         name: string;

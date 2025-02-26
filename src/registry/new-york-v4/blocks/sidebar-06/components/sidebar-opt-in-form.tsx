@@ -1,6 +1,6 @@
-import { Button } from '@/registry/new-york-v4/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { SidebarInput } from '@/registry/new-york-v4/ui/sidebar';
+import { Button } from "@/registry/new-york-v4/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { SidebarInput } from "@/registry/new-york-v4/ui/sidebar";
 
 export function SidebarOptInForm() {
     return (

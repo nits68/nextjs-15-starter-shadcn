@@ -1,9 +1,9 @@
-import { Label } from '@/registry/new-york-v4/ui/label';
-import { SidebarGroup, SidebarGroupContent, SidebarInput } from '@/registry/new-york-v4/ui/sidebar';
+import { Label } from "@/registry/new-york-v4/ui/label";
+import { SidebarGroup, SidebarGroupContent, SidebarInput } from "@/registry/new-york-v4/ui/sidebar";
 
-import { Search } from 'lucide-react';
+import { Search } from "lucide-react";
 
-export function SearchForm({ ...props }: React.ComponentProps<'form'>) {
+export function SearchForm({ ...props }: React.ComponentProps<"form">) {
     return (
         <form {...props}>
             <SidebarGroup className='py-0'>

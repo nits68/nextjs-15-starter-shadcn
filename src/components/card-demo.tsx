@@ -1,13 +1,13 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york-v4/ui/avatar';
-import { Badge } from '@/registry/new-york-v4/ui/badge';
-import { Button } from '@/registry/new-york-v4/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { Input } from '@/registry/new-york-v4/ui/input';
-import { Label } from '@/registry/new-york-v4/ui/label';
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/new-york-v4/ui/avatar";
+import { Badge } from "@/registry/new-york-v4/ui/badge";
+import { Button } from "@/registry/new-york-v4/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { Input } from "@/registry/new-york-v4/ui/input";
+import { Label } from "@/registry/new-york-v4/ui/label";
 
-import { BathIcon, BedIcon, LandPlotIcon } from 'lucide-react';
+import { BathIcon, BedIcon, LandPlotIcon } from "lucide-react";
 
 export function CardDemo() {
     return (
@@ -45,7 +45,7 @@ export function CardDemo() {
                             Login with Google
                         </Button>
                         <div className='mt-4 text-center text-sm'>
-                            Don&apos;t have an account?{' '}
+                            Don&apos;t have an account?{" "}
                             <a href='#' className='underline underline-offset-4'>
                                 Sign up
                             </a>

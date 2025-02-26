@@ -1,13 +1,13 @@
-import { cn } from '@/registry/new-york-v4/lib/utils';
-import { Button } from '@/registry/new-york-v4/ui/button';
-import { Input } from '@/registry/new-york-v4/ui/input';
-import { Label } from '@/registry/new-york-v4/ui/label';
+import { cn } from "@/registry/new-york-v4/lib/utils";
+import { Button } from "@/registry/new-york-v4/ui/button";
+import { Input } from "@/registry/new-york-v4/ui/input";
+import { Label } from "@/registry/new-york-v4/ui/label";
 
-import { GalleryVerticalEnd } from 'lucide-react';
+import { GalleryVerticalEnd } from "lucide-react";
 
-export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) {
+export function LoginForm({ className, ...props }: React.ComponentProps<"div">) {
     return (
-        <div className={cn('flex flex-col gap-6', className)} {...props}>
+        <div className={cn("flex flex-col gap-6", className)} {...props}>
             <form>
                 <div className='flex flex-col gap-6'>
                     <div className='flex flex-col items-center gap-2'>
@@ -19,7 +19,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
                         </a>
                         <h1 className='text-xl font-bold'>Welcome to Acme Inc.</h1>
                         <div className='text-center text-sm'>
-                            Don&apos;t have an account?{' '}
+                            Don&apos;t have an account?{" "}
                             <a href='#' className='underline underline-offset-4'>
                                 Sign up
                             </a>
@@ -60,7 +60,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
                 </div>
             </form>
             <div className='text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4'>
-                By clicking continue, you agree to our <a href='#'>Terms of Service</a> and{' '}
+                By clicking continue, you agree to our <a href='#'>Terms of Service</a> and{" "}
                 <a href='#'>Privacy Policy</a>.
             </div>
         </div>

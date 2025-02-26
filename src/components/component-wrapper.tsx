@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { cn } from '@/registry/new-york-v4/lib/utils';
+import { cn } from "@/registry/new-york-v4/lib/utils";
 
 export function ComponentWrapper({
     className,
     name,
     children,
     ...props
-}: React.ComponentPropsWithoutRef<'div'> & { name: string }) {
+}: React.ComponentPropsWithoutRef<"div"> & { name: string }) {
     return (
         <ComponentErrorBoundary name={name}>
             <div
                 id={name}
                 data-name={name.toLowerCase()}
-                className={cn('flex w-full scroll-mt-16 flex-col rounded-lg border', className)}
+                className={cn("flex w-full scroll-mt-16 flex-col rounded-lg border", className)}
                 {...props}>
                 <div className='border-b px-4 py-3'>
                     <div className='text-sm font-medium'>{getComponentName(name)}</div>
@@ -54,5 +54,5 @@ class ComponentErrorBoundary extends React.Component<
 
 function getComponentName(name: string) {
     // convert kebab-case to title case
-    return name.replace(/-/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+    return name.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 }

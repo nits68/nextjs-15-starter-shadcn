@@ -1,26 +1,26 @@
-'use client';
+"use client";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/registry/new-york-v4/ui/chart';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/registry/new-york-v4/ui/chart";
 
-import { TrendingUp } from 'lucide-react';
-import { Bar, BarChart, CartesianGrid, Cell, LabelList } from 'recharts';
+import { TrendingUp } from "lucide-react";
+import { Bar, BarChart, CartesianGrid, Cell, LabelList } from "recharts";
 
-export const description = 'A bar chart with negative values';
+export const description = "A bar chart with negative values";
 
 const chartData = [
-    { month: 'January', visitors: 186 },
-    { month: 'February', visitors: 205 },
-    { month: 'March', visitors: -207 },
-    { month: 'April', visitors: 173 },
-    { month: 'May', visitors: -209 },
-    { month: 'June', visitors: 214 }
+    { month: "January", visitors: 186 },
+    { month: "February", visitors: 205 },
+    { month: "March", visitors: -207 },
+    { month: "April", visitors: 173 },
+    { month: "May", visitors: -209 },
+    { month: "June", visitors: 214 },
 ];
 
 const chartConfig = {
     visitors: {
-        label: 'Visitors'
-    }
+        label: "Visitors",
+    },
 } satisfies ChartConfig;
 
 export function ChartBarNegative() {
@@ -38,7 +38,7 @@ export function ChartBarNegative() {
                         <Bar dataKey='visitors'>
                             <LabelList position='top' dataKey='month' fillOpacity={1} />
                             {chartData.map((item) => (
-                                <Cell key={item.month} fill={item.visitors > 0 ? 'var(--chart-1)' : 'var(--chart-2)'} />
+                                <Cell key={item.month} fill={item.visitors > 0 ? "var(--chart-1)" : "var(--chart-2)"} />
                             ))}
                         </Bar>
                     </BarChart>

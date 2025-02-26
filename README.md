@@ -132,8 +132,15 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ### Useful links
 - [React](https://react.dev/)
+- [React reference](https://react.dev/reference/react)
 - [NEXT.js](https://nextjs.org/)
+- [Next.js - Getting Started](https://nextjs.org/docs/app/getting-started)
 - [Tailwind CHEAT SHEET](https://nerdcave.com/tailwind-cheat-sheet)
 - [Shadcn/ui](https://ui.shadcn.com/)
 - [AwesomeShadcn UI](https://shadcn.batchtool.com/)
 - [FrontendShape](https://frontendshape.com/category/nextjs)
+- [TanStack Table](https://tanstack.com/table/latest)
+- [Zustand - Introduction](https://zustand.docs.pmnd.rs/getting-started/introduction)
+- [Mastering State Management with Zustand in Next.js and React](https://dev.to/mrsupercraft/mastering-state-management-with-zustand-in-nextjs-and-react-1g26)
+- [Integrating API with State Management in React using Zustand](https://dev.to/geraldhamiltonwicks/integrating-api-with-state-management-in-react-using-zustand-4mje)
+- [Using Zustand as a state management library](https://medium.com/kocfinanstech/using-zustand-as-a-state-management-library-6893bd969526)

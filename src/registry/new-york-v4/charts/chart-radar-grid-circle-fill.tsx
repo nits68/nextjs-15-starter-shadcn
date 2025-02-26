@@ -1,27 +1,27 @@
-'use client';
+"use client";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/registry/new-york-v4/ui/chart';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/registry/new-york-v4/ui/chart";
 
-import { TrendingUp } from 'lucide-react';
-import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts';
+import { TrendingUp } from "lucide-react";
+import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts";
 
-export const description = 'A radar chart with a grid and circle fill';
+export const description = "A radar chart with a grid and circle fill";
 
 const chartData = [
-    { month: 'January', desktop: 186 },
-    { month: 'February', desktop: 285 },
-    { month: 'March', desktop: 237 },
-    { month: 'April', desktop: 203 },
-    { month: 'May', desktop: 209 },
-    { month: 'June', desktop: 264 }
+    { month: "January", desktop: 186 },
+    { month: "February", desktop: 285 },
+    { month: "March", desktop: 237 },
+    { month: "April", desktop: 203 },
+    { month: "May", desktop: 209 },
+    { month: "June", desktop: 264 },
 ];
 
 const chartConfig = {
     desktop: {
-        label: 'Desktop',
-        color: 'var(--chart-1)'
-    }
+        label: "Desktop",
+        color: "var(--chart-1)",
+    },
 } satisfies ChartConfig;
 
 export function ChartRadarGridCircleFill() {

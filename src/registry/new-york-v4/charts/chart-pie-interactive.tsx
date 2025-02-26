@@ -1,64 +1,64 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
 import {
     ChartConfig,
     ChartContainer,
     ChartStyle,
     ChartTooltip,
-    ChartTooltipContent
-} from '@/registry/new-york-v4/ui/chart';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york-v4/ui/select';
+    ChartTooltipContent,
+} from "@/registry/new-york-v4/ui/chart";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/registry/new-york-v4/ui/select";
 
-import { Label, Pie, PieChart, Sector } from 'recharts';
-import { PieSectorDataItem } from 'recharts/types/polar/Pie';
+import { Label, Pie, PieChart, Sector } from "recharts";
+import { PieSectorDataItem } from "recharts/types/polar/Pie";
 
-export const description = 'An interactive pie chart';
+export const description = "An interactive pie chart";
 
 const desktopData = [
-    { month: 'january', desktop: 186, fill: 'var(--color-january)' },
-    { month: 'february', desktop: 305, fill: 'var(--color-february)' },
-    { month: 'march', desktop: 237, fill: 'var(--color-march)' },
-    { month: 'april', desktop: 173, fill: 'var(--color-april)' },
-    { month: 'may', desktop: 209, fill: 'var(--color-may)' }
+    { month: "january", desktop: 186, fill: "var(--color-january)" },
+    { month: "february", desktop: 305, fill: "var(--color-february)" },
+    { month: "march", desktop: 237, fill: "var(--color-march)" },
+    { month: "april", desktop: 173, fill: "var(--color-april)" },
+    { month: "may", desktop: 209, fill: "var(--color-may)" },
 ];
 
 const chartConfig = {
     visitors: {
-        label: 'Visitors'
+        label: "Visitors",
     },
     desktop: {
-        label: 'Desktop'
+        label: "Desktop",
     },
     mobile: {
-        label: 'Mobile'
+        label: "Mobile",
     },
     january: {
-        label: 'January',
-        color: 'var(--chart-1)'
+        label: "January",
+        color: "var(--chart-1)",
     },
     february: {
-        label: 'February',
-        color: 'var(--chart-2)'
+        label: "February",
+        color: "var(--chart-2)",
     },
     march: {
-        label: 'March',
-        color: 'var(--chart-3)'
+        label: "March",
+        color: "var(--chart-3)",
     },
     april: {
-        label: 'April',
-        color: 'var(--chart-4)'
+        label: "April",
+        color: "var(--chart-4)",
     },
     may: {
-        label: 'May',
-        color: 'var(--chart-5)'
-    }
+        label: "May",
+        color: "var(--chart-5)",
+    },
 } satisfies ChartConfig;
 
 export function ChartPieInteractive() {
-    const id = 'pie-interactive';
+    const id = "pie-interactive";
     const [activeMonth, setActiveMonth] = React.useState(desktopData[0].month);
 
     const activeIndex = React.useMemo(() => desktopData.findIndex((item) => item.month === activeMonth), [activeMonth]);
@@ -90,7 +90,7 @@ export function ChartPieInteractive() {
                                         <span
                                             className='flex h-3 w-3 shrink-0 rounded-xs'
                                             style={{
-                                                backgroundColor: `var(--color-${key})`
+                                                backgroundColor: `var(--color-${key})`,
                                             }}
                                         />
                                         {config?.label}
@@ -120,7 +120,7 @@ export function ChartPieInteractive() {
                             )}>
                             <Label
                                 content={({ viewBox }) => {
-                                    if (viewBox && 'cx' in viewBox && 'cy' in viewBox) {
+                                    if (viewBox && "cx" in viewBox && "cy" in viewBox) {
                                         return (
                                             <text
                                                 x={viewBox.cx}

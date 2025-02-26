@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuSeparator,
-    DropdownMenuTrigger
-} from '@/registry/new-york-v4/ui/dropdown-menu';
+    DropdownMenuTrigger,
+} from "@/registry/new-york-v4/ui/dropdown-menu";
 import {
     SidebarGroup,
     SidebarGroupLabel,
@@ -14,13 +14,13 @@ import {
     SidebarMenuAction,
     SidebarMenuButton,
     SidebarMenuItem,
-    useSidebar
-} from '@/registry/new-york-v4/ui/sidebar';
+    useSidebar,
+} from "@/registry/new-york-v4/ui/sidebar";
 
-import { ArrowUpRight, Link, MoreHorizontal, StarOff, Trash2 } from 'lucide-react';
+import { ArrowUpRight, Link, MoreHorizontal, StarOff, Trash2 } from "lucide-react";
 
 export function NavFavorites({
-    favorites
+    favorites,
 }: {
     favorites: {
         name: string;
@@ -51,8 +51,8 @@ export function NavFavorites({
                             </DropdownMenuTrigger>
                             <DropdownMenuContent
                                 className='w-56 rounded-lg'
-                                side={isMobile ? 'bottom' : 'right'}
-                                align={isMobile ? 'end' : 'start'}>
+                                side={isMobile ? "bottom" : "right"}
+                                align={isMobile ? "end" : "start"}>
                                 <DropdownMenuItem>
                                     <StarOff className='text-muted-foreground' />
                                     <span>Remove from Favorites</span>

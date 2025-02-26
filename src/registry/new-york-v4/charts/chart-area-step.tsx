@@ -1,28 +1,28 @@
-'use client';
+"use client";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/registry/new-york-v4/ui/chart';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/registry/new-york-v4/ui/chart";
 
-import { Activity, TrendingUp } from 'lucide-react';
-import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
+import { Activity, TrendingUp } from "lucide-react";
+import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 
-export const description = 'A step area chart';
+export const description = "A step area chart";
 
 const chartData = [
-    { month: 'January', desktop: 186 },
-    { month: 'February', desktop: 305 },
-    { month: 'March', desktop: 237 },
-    { month: 'April', desktop: 73 },
-    { month: 'May', desktop: 209 },
-    { month: 'June', desktop: 214 }
+    { month: "January", desktop: 186 },
+    { month: "February", desktop: 305 },
+    { month: "March", desktop: 237 },
+    { month: "April", desktop: 73 },
+    { month: "May", desktop: 209 },
+    { month: "June", desktop: 214 },
 ];
 
 const chartConfig = {
     desktop: {
-        label: 'Desktop',
-        color: 'var(--chart-1)',
-        icon: Activity
-    }
+        label: "Desktop",
+        color: "var(--chart-1)",
+        icon: Activity,
+    },
 } satisfies ChartConfig;
 
 export function ChartAreaStep() {
@@ -39,7 +39,7 @@ export function ChartAreaStep() {
                         data={chartData}
                         margin={{
                             left: 12,
-                            right: 12
+                            right: 12,
                         }}>
                         <CartesianGrid vertical={false} />
                         <XAxis

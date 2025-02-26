@@ -1,5 +1,5 @@
-import { Alert, AlertDescription, AlertTitle } from '@/registry/new-york-v4/ui/alert';
-import { Button } from '@/registry/new-york-v4/ui/button';
+import { Alert, AlertDescription, AlertTitle } from "@/registry/new-york-v4/ui/alert";
+import { Button } from "@/registry/new-york-v4/ui/button";
 
 import {
     AlertCircleIcon,
@@ -7,8 +7,8 @@ import {
     CheckCircle2Icon,
     GiftIcon,
     PopcornIcon,
-    ShieldAlertIcon
-} from 'lucide-react';
+    ShieldAlertIcon,
+} from "lucide-react";
 
 export function AlertDemo() {
     return (

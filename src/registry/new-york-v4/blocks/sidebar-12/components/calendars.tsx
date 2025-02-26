@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/registry/new-york-v4/ui/collapsible';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/registry/new-york-v4/ui/collapsible";
 import {
     SidebarGroup,
     SidebarGroupContent,
@@ -8,13 +8,13 @@ import {
     SidebarMenu,
     SidebarMenuButton,
     SidebarMenuItem,
-    SidebarSeparator
-} from '@/registry/new-york-v4/ui/sidebar';
+    SidebarSeparator,
+} from "@/registry/new-york-v4/ui/sidebar";
 
-import { Check, ChevronRight } from 'lucide-react';
+import { Check, ChevronRight } from "lucide-react";
 
 export function Calendars({
-    calendars
+    calendars,
 }: {
     calendars: {
         name: string;
@@ -31,7 +31,7 @@ export function Calendars({
                                 asChild
                                 className='group/label text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground w-full text-sm'>
                                 <CollapsibleTrigger>
-                                    {calendar.name}{' '}
+                                    {calendar.name}{" "}
                                     <ChevronRight className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90' />
                                 </CollapsibleTrigger>
                             </SidebarGroupLabel>

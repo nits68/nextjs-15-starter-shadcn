@@ -1,19 +1,19 @@
-import { Label } from '@/registry/new-york-v4/ui/label';
-import { RadioGroup, RadioGroupItem } from '@/registry/new-york-v4/ui/radio-group';
+import { Label } from "@/registry/new-york-v4/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/registry/new-york-v4/ui/radio-group";
 
 const plans = [
     {
-        id: 'starter',
-        name: 'Starter Plan',
-        description: 'Perfect for small businesses getting started with our platform',
-        price: '$10'
+        id: "starter",
+        name: "Starter Plan",
+        description: "Perfect for small businesses getting started with our platform",
+        price: "$10",
     },
     {
-        id: 'pro',
-        name: 'Pro Plan',
-        description: 'Advanced features for growing businesses with higher demands',
-        price: '$20'
-    }
+        id: "pro",
+        name: "Pro Plan",
+        description: "Advanced features for growing businesses with higher demands",
+        price: "$20",
+    },
 ] as const;
 
 export function RadioGroupDemo() {

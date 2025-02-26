@@ -1,10 +1,10 @@
-import { AppSidebar } from '@/registry/new-york-v4/blocks/sidebar-16/components/app-sidebar';
-import { SiteHeader } from '@/registry/new-york-v4/blocks/sidebar-16/components/site-header';
-import { SidebarInset, SidebarProvider } from '@/registry/new-york-v4/ui/sidebar';
+import { AppSidebar } from "@/registry/new-york-v4/blocks/sidebar-16/components/app-sidebar";
+import { SiteHeader } from "@/registry/new-york-v4/blocks/sidebar-16/components/site-header";
+import { SidebarInset, SidebarProvider } from "@/registry/new-york-v4/ui/sidebar";
 
-export const iframeHeight = '800px';
+export const iframeHeight = "800px";
 
-export const description = 'A sidebar with a header and a search form.';
+export const description = "A sidebar with a header and a search form.";
 
 export default function Page() {
     return (

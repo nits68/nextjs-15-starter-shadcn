@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { cn } from '@/lib/utils';
-import { Button } from '@/registry/new-york-v4/ui/button';
-import { Calendar } from '@/registry/new-york-v4/ui/calendar';
-import { Checkbox } from '@/registry/new-york-v4/ui/checkbox';
+import { cn } from "@/lib/utils";
+import { Button } from "@/registry/new-york-v4/ui/button";
+import { Calendar } from "@/registry/new-york-v4/ui/calendar";
+import { Checkbox } from "@/registry/new-york-v4/ui/checkbox";
 import {
     Form,
     FormControl,
@@ -11,96 +11,96 @@ import {
     FormField,
     FormItem,
     FormLabel,
-    FormMessage
-} from '@/registry/new-york-v4/ui/form';
-import { Input } from '@/registry/new-york-v4/ui/input';
-import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york-v4/ui/popover';
-import { RadioGroup, RadioGroupItem } from '@/registry/new-york-v4/ui/radio-group';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york-v4/ui/select';
-import { Switch } from '@/registry/new-york-v4/ui/switch';
-import { Textarea } from '@/registry/new-york-v4/ui/textarea';
-import { zodResolver } from '@hookform/resolvers/zod';
+    FormMessage,
+} from "@/registry/new-york-v4/ui/form";
+import { Input } from "@/registry/new-york-v4/ui/input";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/new-york-v4/ui/popover";
+import { RadioGroup, RadioGroupItem } from "@/registry/new-york-v4/ui/radio-group";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/registry/new-york-v4/ui/select";
+import { Switch } from "@/registry/new-york-v4/ui/switch";
+import { Textarea } from "@/registry/new-york-v4/ui/textarea";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-import { format } from 'date-fns';
-import { CalendarIcon } from 'lucide-react';
-import { useForm } from 'react-hook-form';
-import { toast } from 'sonner';
-import { z } from 'zod';
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { z } from "zod";
 
 const items = [
     {
-        id: 'recents',
-        label: 'Recents'
+        id: "recents",
+        label: "Recents",
     },
     {
-        id: 'home',
-        label: 'Home'
+        id: "home",
+        label: "Home",
     },
     {
-        id: 'applications',
-        label: 'Applications'
+        id: "applications",
+        label: "Applications",
     },
     {
-        id: 'desktop',
-        label: 'Desktop'
+        id: "desktop",
+        label: "Desktop",
     },
     {
-        id: 'downloads',
-        label: 'Downloads'
+        id: "downloads",
+        label: "Downloads",
     },
     {
-        id: 'documents',
-        label: 'Documents'
-    }
+        id: "documents",
+        label: "Documents",
+    },
 ] as const;
 
 const FormSchema = z.object({
     username: z.string().min(2, {
-        message: 'Username must be at least 2 characters.'
+        message: "Username must be at least 2 characters.",
     }),
     bio: z
         .string()
         .min(10, {
-            message: 'Bio must be at least 10 characters.'
+            message: "Bio must be at least 10 characters.",
         })
         .max(160, {
-            message: 'Bio must not be longer than 30 characters.'
+            message: "Bio must not be longer than 30 characters.",
         }),
     email: z
         .string({
-            required_error: 'Please select an email to display.'
+            required_error: "Please select an email to display.",
         })
         .email(),
-    type: z.enum(['all', 'mentions', 'none'], {
-        required_error: 'You need to select a notification type.'
+    type: z.enum(["all", "mentions", "none"], {
+        required_error: "You need to select a notification type.",
     }),
     mobile: z.boolean().default(false).optional(),
     items: z.array(z.string()).refine((value) => value.some((item) => item), {
-        message: 'You have to select at least one item.'
+        message: "You have to select at least one item.",
     }),
     dob: z.date({
-        required_error: 'A date of birth is required.'
+        required_error: "A date of birth is required.",
     }),
     marketing_emails: z.boolean().default(false).optional(),
-    security_emails: z.boolean()
+    security_emails: z.boolean(),
 });
 
 export function FormDemo() {
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
-            username: '',
-            items: ['recents', 'home']
-        }
+            username: "",
+            items: ["recents", "home"],
+        },
     });
 
     function onSubmit(data: z.infer<typeof FormSchema>) {
-        toast('You submitted the following values:', {
+        toast("You submitted the following values:", {
             description: (
                 <pre className='mt-2 w-[340px] rounded-md bg-slate-950 p-4'>
                     <code className='text-white'>{JSON.stringify(data, null, 2)}</code>
                 </pre>
-            )
+            ),
         });
     }
 
@@ -244,8 +244,8 @@ export function FormDemo() {
                                                                     ? field.onChange([...field.value, item.id])
                                                                     : field.onChange(
                                                                           field.value?.filter(
-                                                                              (value) => value !== item.id
-                                                                          )
+                                                                              (value) => value !== item.id,
+                                                                          ),
                                                                       );
                                                             }}
                                                         />
@@ -273,12 +273,12 @@ export function FormDemo() {
                                 <PopoverTrigger asChild>
                                     <FormControl>
                                         <Button
-                                            variant={'outline'}
+                                            variant={"outline"}
                                             className={cn(
-                                                'w-[240px] pl-3 text-left font-normal',
-                                                !field.value && 'text-muted-foreground'
+                                                "w-[240px] pl-3 text-left font-normal",
+                                                !field.value && "text-muted-foreground",
                                             )}>
-                                            {field.value ? format(field.value, 'PPP') : <span>Pick a date</span>}
+                                            {field.value ? format(field.value, "PPP") : <span>Pick a date</span>}
                                             <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
                                         </Button>
                                     </FormControl>
@@ -288,7 +288,7 @@ export function FormDemo() {
                                         mode='single'
                                         selected={field.value}
                                         onSelect={field.onChange}
-                                        disabled={(date) => date > new Date() || date < new Date('1900-01-01')}
+                                        disabled={(date) => date > new Date() || date < new Date("1900-01-01")}
                                         initialFocus
                                     />
                                 </PopoverContent>

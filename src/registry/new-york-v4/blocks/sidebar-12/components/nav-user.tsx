@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york-v4/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/new-york-v4/ui/avatar";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -8,14 +8,14 @@ import {
     DropdownMenuItem,
     DropdownMenuLabel,
     DropdownMenuSeparator,
-    DropdownMenuTrigger
-} from '@/registry/new-york-v4/ui/dropdown-menu';
-import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from '@/registry/new-york-v4/ui/sidebar';
+    DropdownMenuTrigger,
+} from "@/registry/new-york-v4/ui/dropdown-menu";
+import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "@/registry/new-york-v4/ui/sidebar";
 
-import { BadgeCheck, Bell, ChevronsUpDown, CreditCard, LogOut, Sparkles } from 'lucide-react';
+import { BadgeCheck, Bell, ChevronsUpDown, CreditCard, LogOut, Sparkles } from "lucide-react";
 
 export function NavUser({
-    user
+    user,
 }: {
     user: {
         name: string;
@@ -46,7 +46,7 @@ export function NavUser({
                     </DropdownMenuTrigger>
                     <DropdownMenuContent
                         className='w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg'
-                        side={isMobile ? 'bottom' : 'right'}
+                        side={isMobile ? "bottom" : "right"}
                         align='start'
                         sideOffset={4}>
                         <DropdownMenuLabel className='p-0 font-normal'>

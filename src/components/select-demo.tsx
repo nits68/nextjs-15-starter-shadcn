@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 
 import {
     Select,
@@ -7,10 +7,10 @@ import {
     SelectItem,
     SelectLabel,
     SelectTrigger,
-    SelectValue
-} from '@/registry/new-york-v4/ui/select';
+    SelectValue,
+} from "@/registry/new-york-v4/ui/select";
 
-import { ChartBarIcon, ChartLineIcon, ChartPieIcon, CircleDashed } from 'lucide-react';
+import { ChartBarIcon, ChartLineIcon, ChartPieIcon, CircleDashed } from "lucide-react";
 
 export function SelectDemo() {
     return (

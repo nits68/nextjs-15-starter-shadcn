@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { Button } from '@/registry/new-york-v4/ui/button';
+import { Button } from "@/registry/new-york-v4/ui/button";
 import {
     Drawer,
     DrawerClose,
@@ -11,52 +11,52 @@ import {
     DrawerFooter,
     DrawerHeader,
     DrawerTitle,
-    DrawerTrigger
-} from '@/registry/new-york-v4/ui/drawer';
+    DrawerTrigger,
+} from "@/registry/new-york-v4/ui/drawer";
 
-import { Minus, Plus } from 'lucide-react';
-import { Bar, BarChart, ResponsiveContainer } from 'recharts';
+import { Minus, Plus } from "lucide-react";
+import { Bar, BarChart, ResponsiveContainer } from "recharts";
 
 const data = [
     {
-        goal: 400
+        goal: 400,
     },
     {
-        goal: 300
+        goal: 300,
     },
     {
-        goal: 200
+        goal: 200,
     },
     {
-        goal: 300
+        goal: 300,
     },
     {
-        goal: 200
+        goal: 200,
     },
     {
-        goal: 278
+        goal: 278,
     },
     {
-        goal: 189
+        goal: 189,
     },
     {
-        goal: 239
+        goal: 239,
     },
     {
-        goal: 300
+        goal: 300,
     },
     {
-        goal: 200
+        goal: 200,
     },
     {
-        goal: 278
+        goal: 278,
     },
     {
-        goal: 189
+        goal: 189,
     },
     {
-        goal: 349
-    }
+        goal: 349,
+    },
 ];
 
 export function DrawerDemo() {
@@ -119,8 +119,8 @@ function DrawerBottom() {
                                         dataKey='goal'
                                         style={
                                             {
-                                                fill: 'hsl(var(--foreground))',
-                                                opacity: 0.9
+                                                fill: "hsl(var(--foreground))",
+                                                opacity: 0.9,
                                             } as React.CSSProperties
                                         }
                                     />
@@ -174,7 +174,7 @@ function DrawerScrollableContent() {
     );
 }
 
-const directions = ['top', 'right', 'bottom', 'left'] as const;
+const directions = ["top", "right", "bottom", "left"] as const;
 
 function DrawerDirections() {
     return (

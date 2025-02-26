@@ -7,9 +7,9 @@ import {
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
-    AlertDialogTrigger
-} from '@/registry/new-york-v4/ui/alert-dialog';
-import { Button } from '@/registry/new-york-v4/ui/button';
+    AlertDialogTrigger,
+} from "@/registry/new-york-v4/ui/alert-dialog";
+import { Button } from "@/registry/new-york-v4/ui/button";
 
 export function AlertDialogDemo() {
     return (

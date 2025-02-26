@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york-v4/ui/avatar';
-import { Button } from '@/registry/new-york-v4/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/new-york-v4/ui/avatar";
+import { Button } from "@/registry/new-york-v4/ui/button";
 import {
     DropdownMenu,
     DropdownMenuCheckboxItem,
@@ -19,8 +19,8 @@ import {
     DropdownMenuSub,
     DropdownMenuSubContent,
     DropdownMenuSubTrigger,
-    DropdownMenuTrigger
-} from '@/registry/new-york-v4/ui/dropdown-menu';
+    DropdownMenuTrigger,
+} from "@/registry/new-york-v4/ui/dropdown-menu";
 
 import {
     BadgeCheckIcon,
@@ -35,8 +35,8 @@ import {
     ShareIcon,
     SparklesIcon,
     TrashIcon,
-    UserIcon
-} from 'lucide-react';
+    UserIcon,
+} from "lucide-react";
 
 export function DropdownMenuDemo() {
     return (
@@ -158,7 +158,7 @@ function DropdownMenuCheckboxes() {
 }
 
 function DropdownMenuRadioGroupDemo() {
-    const [position, setPosition] = React.useState('bottom');
+    const [position, setPosition] = React.useState("bottom");
 
     return (
         <DropdownMenu>

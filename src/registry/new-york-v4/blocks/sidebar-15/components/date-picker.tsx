@@ -1,5 +1,5 @@
-import { Calendar } from '@/registry/new-york-v4/ui/calendar';
-import { SidebarGroup, SidebarGroupContent } from '@/registry/new-york-v4/ui/sidebar';
+import { Calendar } from "@/registry/new-york-v4/ui/calendar";
+import { SidebarGroup, SidebarGroupContent } from "@/registry/new-york-v4/ui/sidebar";
 
 export function DatePicker() {
     return (

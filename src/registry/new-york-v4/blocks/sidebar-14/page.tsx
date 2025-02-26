@@ -1,13 +1,13 @@
-import { AppSidebar } from '@/registry/new-york-v4/blocks/sidebar-14/components/app-sidebar';
+import { AppSidebar } from "@/registry/new-york-v4/blocks/sidebar-14/components/app-sidebar";
 import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
     BreadcrumbList,
     BreadcrumbPage,
-    BreadcrumbSeparator
-} from '@/registry/new-york-v4/ui/breadcrumb';
-import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/registry/new-york-v4/ui/sidebar';
+    BreadcrumbSeparator,
+} from "@/registry/new-york-v4/ui/breadcrumb";
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/registry/new-york-v4/ui/sidebar";
 
 export default function Page() {
     return (

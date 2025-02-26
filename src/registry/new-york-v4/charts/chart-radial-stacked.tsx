@@ -1,24 +1,24 @@
-'use client';
+"use client";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/registry/new-york-v4/ui/chart';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/registry/new-york-v4/ui/chart";
 
-import { TrendingUp } from 'lucide-react';
-import { Label, PolarRadiusAxis, RadialBar, RadialBarChart } from 'recharts';
+import { TrendingUp } from "lucide-react";
+import { Label, PolarRadiusAxis, RadialBar, RadialBarChart } from "recharts";
 
-export const description = 'A radial chart with stacked sections';
+export const description = "A radial chart with stacked sections";
 
-const chartData = [{ month: 'january', desktop: 1260, mobile: 570 }];
+const chartData = [{ month: "january", desktop: 1260, mobile: 570 }];
 
 const chartConfig = {
     desktop: {
-        label: 'Desktop',
-        color: 'var(--chart-1)'
+        label: "Desktop",
+        color: "var(--chart-1)",
     },
     mobile: {
-        label: 'Mobile',
-        color: 'var(--chart-2)'
-    }
+        label: "Mobile",
+        color: "var(--chart-2)",
+    },
 } satisfies ChartConfig;
 
 export function ChartRadialStacked() {
@@ -37,7 +37,7 @@ export function ChartRadialStacked() {
                         <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
                             <Label
                                 content={({ viewBox }) => {
-                                    if (viewBox && 'cx' in viewBox && 'cy' in viewBox) {
+                                    if (viewBox && "cx" in viewBox && "cy" in viewBox) {
                                         return (
                                             <text x={viewBox.cx} y={viewBox.cy} textAnchor='middle'>
                                                 <tspan

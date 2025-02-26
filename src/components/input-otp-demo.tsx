@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from '@/registry/new-york-v4/ui/input-otp';
-import { Label } from '@/registry/new-york-v4/ui/label';
+import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from "@/registry/new-york-v4/ui/input-otp";
+import { Label } from "@/registry/new-york-v4/ui/label";
 
-import { REGEXP_ONLY_DIGITS } from 'input-otp';
+import { REGEXP_ONLY_DIGITS } from "input-otp";
 
 export function InputOTPDemo() {
     return (
@@ -58,7 +58,7 @@ function InputOTPPattern() {
 }
 
 function InputOTPWithSeparator() {
-    const [value, setValue] = React.useState('123456');
+    const [value, setValue] = React.useState("123456");
 
     return (
         <div className='grid gap-2'>

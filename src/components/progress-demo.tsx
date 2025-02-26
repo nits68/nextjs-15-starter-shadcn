@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { Progress } from '@/registry/new-york-v4/ui/progress';
+import { Progress } from "@/registry/new-york-v4/ui/progress";
 
 export function ProgressDemo() {
     const [progress, setProgress] = React.useState(13);

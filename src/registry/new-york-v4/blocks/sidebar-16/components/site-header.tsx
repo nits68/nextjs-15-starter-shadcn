@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { SearchForm } from '@/registry/new-york-v4/blocks/sidebar-16/components/search-form';
+import { SearchForm } from "@/registry/new-york-v4/blocks/sidebar-16/components/search-form";
 import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
     BreadcrumbList,
     BreadcrumbPage,
-    BreadcrumbSeparator
-} from '@/registry/new-york-v4/ui/breadcrumb';
-import { Button } from '@/registry/new-york-v4/ui/button';
-import { Separator } from '@/registry/new-york-v4/ui/separator';
-import { useSidebar } from '@/registry/new-york-v4/ui/sidebar';
+    BreadcrumbSeparator,
+} from "@/registry/new-york-v4/ui/breadcrumb";
+import { Button } from "@/registry/new-york-v4/ui/button";
+import { Separator } from "@/registry/new-york-v4/ui/separator";
+import { useSidebar } from "@/registry/new-york-v4/ui/sidebar";
 
-import { SidebarIcon } from 'lucide-react';
+import { SidebarIcon } from "lucide-react";
 
 export function SiteHeader() {
     const { toggleSidebar } = useSidebar();

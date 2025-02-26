@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuTrigger
-} from '@/registry/new-york-v4/ui/dropdown-menu';
+    DropdownMenuTrigger,
+} from "@/registry/new-york-v4/ui/dropdown-menu";
 import {
     SidebarGroup,
     SidebarMenu,
     SidebarMenuButton,
     SidebarMenuItem,
-    useSidebar
-} from '@/registry/new-york-v4/ui/sidebar';
+    useSidebar,
+} from "@/registry/new-york-v4/ui/sidebar";
 
-import { type LucideIcon, MoreHorizontal } from 'lucide-react';
+import { type LucideIcon, MoreHorizontal } from "lucide-react";
 
 export function NavMain({
-    items
+    items,
 }: {
     items: {
         title: string;
@@ -45,8 +45,8 @@ export function NavMain({
                             </DropdownMenuTrigger>
                             {item.items?.length ? (
                                 <DropdownMenuContent
-                                    side={isMobile ? 'bottom' : 'right'}
-                                    align={isMobile ? 'end' : 'start'}
+                                    side={isMobile ? "bottom" : "right"}
+                                    align={isMobile ? "end" : "start"}
                                     className='min-w-56 rounded-lg'>
                                     {item.items.map((item) => (
                                         <DropdownMenuItem asChild key={item.title}>

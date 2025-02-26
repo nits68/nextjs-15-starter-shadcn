@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { useTheme } from 'next-themes';
+import { useTheme } from "next-themes";
 
-import { META_THEME_COLORS, useMetaColor } from '@/hooks/use-meta-color';
-import { Button } from '@/registry/new-york-v4/ui/button';
+import { META_THEME_COLORS, useMetaColor } from "@/hooks/use-meta-color";
+import { Button } from "@/registry/new-york-v4/ui/button";
 
-import { MoonIcon, SunIcon } from 'lucide-react';
+import { MoonIcon, SunIcon } from "lucide-react";
 
 export function ModeSwitcher() {
     const { setTheme, resolvedTheme } = useTheme();
     const { setMetaColor } = useMetaColor();
 
     const toggleTheme = React.useCallback(() => {
-        setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
-        setMetaColor(resolvedTheme === 'dark' ? META_THEME_COLORS.light : META_THEME_COLORS.dark);
+        setTheme(resolvedTheme === "dark" ? "light" : "dark");
+        setMetaColor(resolvedTheme === "dark" ? META_THEME_COLORS.light : META_THEME_COLORS.dark);
     }, [resolvedTheme, setTheme, setMetaColor]);
 
     return (

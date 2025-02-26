@@ -1,1 +1,0 @@
-# nextjs-15-starter-shadcn

@@ -1,89 +1,89 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { useTheme } from 'next-themes';
+import { useTheme } from "next-themes";
 
-import { Button } from '@/registry/new-york-v4/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
-import { Checkbox } from '@/registry/new-york-v4/ui/checkbox';
-import { Input } from '@/registry/new-york-v4/ui/input';
-import { Label } from '@/registry/new-york-v4/ui/label';
-import { RadioGroup, RadioGroupItem } from '@/registry/new-york-v4/ui/radio-group';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york-v4/ui/select';
-import { Textarea } from '@/registry/new-york-v4/ui/textarea';
+import { Button } from "@/registry/new-york-v4/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card";
+import { Checkbox } from "@/registry/new-york-v4/ui/checkbox";
+import { Input } from "@/registry/new-york-v4/ui/input";
+import { Label } from "@/registry/new-york-v4/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/registry/new-york-v4/ui/radio-group";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/registry/new-york-v4/ui/select";
+import { Textarea } from "@/registry/new-york-v4/ui/textarea";
 
 const plans = [
     {
-        id: 'starter',
-        name: 'Starter Plan',
-        description: 'Perfect for small businesses.',
-        price: '$10'
+        id: "starter",
+        name: "Starter Plan",
+        description: "Perfect for small businesses.",
+        price: "$10",
     },
     {
-        id: 'pro',
-        name: 'Pro Plan',
-        description: 'Advanced features with more storage.',
-        price: '$20'
-    }
+        id: "pro",
+        name: "Pro Plan",
+        description: "Advanced features with more storage.",
+        price: "$20",
+    },
 ] as const;
 
 const themes = {
     stone: {
         light: {
-            '--primary': 'oklch(0.216 0.006 56.043)', // --color-stone-900
-            '--primary-foreground': 'oklch(0.985 0.001 106.423)', // --color-stone-50
-            '--accent': 'oklch(0.97 0.001 106.424)', // --color-stone-100
-            '--ring': 'oklch(0.869 0.005 56.366)' // --color-stone-300
+            "--primary": "oklch(0.216 0.006 56.043)", // --color-stone-900
+            "--primary-foreground": "oklch(0.985 0.001 106.423)", // --color-stone-50
+            "--accent": "oklch(0.97 0.001 106.424)", // --color-stone-100
+            "--ring": "oklch(0.869 0.005 56.366)", // --color-stone-300
         },
         dark: {
-            '--primary': 'oklch(0.985 0.001 106.423)', // --color-stone-50
-            '--primary-foreground': 'oklch(0.216 0.006 56.043)', // --color-stone-900
-            '--accent': 'oklch(0.268 0.007 34.298)', // --color-stone-800
-            '--accent-foreground': 'oklch(0.985 0.001 106.423)', // --color-stone-50
-            '--ring': 'oklch(0.553 0.013 58.071)' // --color-stone-500
-        }
+            "--primary": "oklch(0.985 0.001 106.423)", // --color-stone-50
+            "--primary-foreground": "oklch(0.216 0.006 56.043)", // --color-stone-900
+            "--accent": "oklch(0.268 0.007 34.298)", // --color-stone-800
+            "--accent-foreground": "oklch(0.985 0.001 106.423)", // --color-stone-50
+            "--ring": "oklch(0.553 0.013 58.071)", // --color-stone-500
+        },
     },
     blue: {
         light: {
-            '--primary': 'oklch(0.546 0.245 262.881)', // --color-blue-600
-            '--primary-foreground': 'oklch(0.985 0.001 106.423)', // --color-blue-50
-            '--ring': 'oklch(0.707 0.165 254.624)' // --color-blue-400
+            "--primary": "oklch(0.546 0.245 262.881)", // --color-blue-600
+            "--primary-foreground": "oklch(0.985 0.001 106.423)", // --color-blue-50
+            "--ring": "oklch(0.707 0.165 254.624)", // --color-blue-400
         },
         dark: {
-            '--primary': 'oklch(0.546 0.245 262.881)', // --color-blue-600
-            '--primary-foreground': 'oklch(0.985 0.001 106.423)', // --color-blue-50
-            '--ring': 'oklch(0.379 0.146 265.522)' // --color-blue-400
-        }
+            "--primary": "oklch(0.546 0.245 262.881)", // --color-blue-600
+            "--primary-foreground": "oklch(0.985 0.001 106.423)", // --color-blue-50
+            "--ring": "oklch(0.379 0.146 265.522)", // --color-blue-400
+        },
     },
     amber: {
         light: {
-            '--primary': 'oklch(0.769 0.188 70.08)', // --color-blue-600
-            '--primary-foreground': 'oklch(0.985 0.001 106.423)', // --color-blue-50
-            '--ring': 'oklch(0.82 0.13 92.25)' // --color-blue-400
+            "--primary": "oklch(0.769 0.188 70.08)", // --color-blue-600
+            "--primary-foreground": "oklch(0.985 0.001 106.423)", // --color-blue-50
+            "--ring": "oklch(0.82 0.13 92.25)", // --color-blue-400
         },
         dark: {
-            '--primary': 'oklch(0.985 0.001 106.423)', // --color-stone-50
-            '--primary-foreground': 'oklch(0.216 0.006 56.043)', // --color-stone-900
-            '--ring': 'oklch(0.553 0.013 58.071)' // --color-stone-500
-        }
+            "--primary": "oklch(0.985 0.001 106.423)", // --color-stone-50
+            "--primary-foreground": "oklch(0.216 0.006 56.043)", // --color-stone-900
+            "--ring": "oklch(0.553 0.013 58.071)", // --color-stone-500
+        },
     },
     teal: {
         light: {
-            '--primary': 'oklch(0.627 0.194 149.214)', // --color-blue-600
-            '--primary-foreground': 'oklch(0.985 0.001 106.423)', // --color-blue-50
-            '--ring': 'oklch(0.79 0.19 153.13)' // --color-blue-400
+            "--primary": "oklch(0.627 0.194 149.214)", // --color-blue-600
+            "--primary-foreground": "oklch(0.985 0.001 106.423)", // --color-blue-50
+            "--ring": "oklch(0.79 0.19 153.13)", // --color-blue-400
         },
         dark: {
-            '--primary': 'oklch(0.985 0.001 106.423)', // --color-stone-50
-            '--primary-foreground': 'oklch(0.216 0.006 56.043)', // --color-stone-900
-            '--ring': 'oklch(0.553 0.013 58.071)' // --color-stone-500
-        }
-    }
+            "--primary": "oklch(0.985 0.001 106.423)", // --color-stone-50
+            "--primary-foreground": "oklch(0.216 0.006 56.043)", // --color-stone-900
+            "--ring": "oklch(0.553 0.013 58.071)", // --color-stone-500
+        },
+    },
 } as const;
 
 export function FormsDemo() {
-    const { theme: mode = 'light' } = useTheme();
+    const { theme: mode = "light" } = useTheme();
     const [theme, setTheme] = React.useState<keyof typeof themes | undefined>(undefined);
 
     const themeStyles = React.useMemo(() => {
@@ -134,7 +134,7 @@ export function FormsDemo() {
                                                 className='size-3.5 rounded-full'
                                                 style={{
                                                     backgroundColor:
-                                                        themes[theme as keyof typeof themes]['light']['--primary']
+                                                        themes[theme as keyof typeof themes]["light"]["--primary"],
                                                 }}
                                             />
                                             {theme}
