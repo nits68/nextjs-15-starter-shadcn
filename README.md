@@ -128,3 +128,12 @@ docker run -p 3000:3000 nextjs-starter-shadcn
 ### License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+### Useful links
+- [React](https://react.dev/)
+- [NEXT.js](https://nextjs.org/)
+- [Tailwind CHEAT SHEET](https://nerdcave.com/tailwind-cheat-sheet)
+- [Shadcn/ui](https://ui.shadcn.com/)
+- [AwesomeShadcn UI](https://shadcn.batchtool.com/)
+- [FrontendShape](https://frontendshape.com/category/nextjs)

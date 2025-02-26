@@ -11,20 +11,33 @@ const withBundleAnalyzer = initializeBundleAnalyzer({
 const nextConfig: NextConfig = {
     output: 'standalone',
     outputFileTracingIncludes: {
-        "/*": ["./registry/**/*"],
-      },
-      images: {
+        '/*': ['./registry/**/*']
+    },
+    images: {
         remotePatterns: [
-          {
-            protocol: "https",
-            hostname: "avatars.githubusercontent.com",
-          },
-          {
-            protocol: "https",
-            hostname: "images.unsplash.com",
-          },
-        ],
-      },
+            {
+                protocol: 'https',
+                hostname: 'avatars.githubusercontent.com'
+            },
+            {
+                protocol: 'https',
+                hostname: 'images.unsplash.com'
+            }
+        ]
+    },
+    experimental: {
+        turbo: {
+          resolveExtensions: [
+            '.mdx',
+            '.tsx',
+            '.ts',
+            '.jsx',
+            '.js',
+            '.mjs',
+            '.json',
+          ],
+        }
+    }
 };
 
 export default withBundleAnalyzer(nextConfig);
