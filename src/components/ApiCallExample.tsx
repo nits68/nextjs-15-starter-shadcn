@@ -4,7 +4,7 @@ import { Badge } from "@/registry/new-york-v4/ui/badge";
 import { Button } from "@/registry/new-york-v4/ui/button";
 import useStore from "@/store/store";
 
-export default function ApiCallExample() {
+export function ApiCallExample() {
     const s = useStore();
 
     return (
@@ -30,6 +30,7 @@ export default function ApiCallExample() {
                     </div>
                 )}
             </div>
+            <div>{ JSON.stringify(s.data) }</div>
         </div>
     );
 }
