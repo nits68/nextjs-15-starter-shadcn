@@ -138,6 +138,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Tailwind CHEAT SHEET](https://nerdcave.com/tailwind-cheat-sheet)
 - [Shadcn/ui](https://ui.shadcn.com/)
 - [AwesomeShadcn UI](https://shadcn.batchtool.com/)
+- [Shadcn UI Blocks](https://www.shadcnui-blocks.com/)
 - [FrontendShape](https://frontendshape.com/category/nextjs)
 - [TanStack Table](https://tanstack.com/table/latest)
 - [Zustand - Introduction](https://zustand.docs.pmnd.rs/getting-started/introduction)

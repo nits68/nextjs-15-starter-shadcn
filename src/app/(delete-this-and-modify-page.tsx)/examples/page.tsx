@@ -46,6 +46,8 @@ import { TextareaDemo } from "@/components/textarea-demo";
 import { ToggleDemo } from "@/components/toggle-demo";
 import { ToggleGroupDemo } from "@/components/toggle-group-demo";
 import { TooltipDemo } from "@/components/tooltip-demo";
+import ApiCallExample from "@/components/ApiCallExample";
+
 
 export default function SinkPage() {
     return (
@@ -191,6 +193,9 @@ export default function SinkPage() {
             </ComponentWrapper>
             <ComponentWrapper name='tooltip'>
                 <TooltipDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name='apicallexample'>
+                <ApiCallExample />
             </ComponentWrapper>
         </div>
     );
